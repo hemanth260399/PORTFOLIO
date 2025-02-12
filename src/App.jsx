@@ -77,7 +77,7 @@ function App() {
         <div className="container py-5 px-5 ">
           <div className="row title-card">
             <div className="col-lg-7">
-              <h1 className="display-1 fw-bolder" ref={homepageref} tabIndex="-1" >Hi,</h1>
+              <h1 className="display-1 fw-bolder" ref={homepageref} tabIndex="-1" >Hi , </h1>
               <h1 className="display-3 fw-bolder mt-3">I'am HemanthRaja S</h1>
               <h1 className="display-5 fw-bolder mt-4">{text}<Cursor cursorColor='blue' /></h1>
               <div>
