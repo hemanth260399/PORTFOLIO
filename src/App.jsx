@@ -77,7 +77,7 @@ function App() {
         <div className="container py-5 px-5 ">
           <div className="row title-card">
             <div className="col-lg-7">
-              <h1 className="display-1 fw-bolder" ref={homepageref} tabIndex="-1" >Hi , </h1>
+              <h1 className="display-1 fw-bolder" ref={homepageref} tabIndex="-1" >Hi, </h1>
               <h1 className="display-3 fw-bolder mt-3">I'am HemanthRaja S</h1>
               <h1 className="display-5 fw-bolder mt-4">{text}<Cursor cursorColor='blue' /></h1>
               <div>
@@ -100,12 +100,12 @@ function App() {
         </div>
         <div >
           <h1 className="text-center text-primary mt-5 italic underline">About</h1>
-          <div className="container  " ref={Aboutref} tabIndex="-1">
+          <div className="container" ref={Aboutref} tabIndex="-1">
             <div className=" row">
-              <motion.div className="col-lg-4" variants={fadeIn("left", 0.3)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }}>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPnZr9tE8evgo3qfyDvXgheJ-zAJX5K3KOg&s" alt="" style={{ width: 300, height: 280, borderRadius: 20, margin: "20px 0px 0px 70px" }} />
+              <motion.div className="col-lg-4" style={{ opacity: 0, overflow: "hidden" }} variants={fadeIn("right", 0.3)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }}>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPnZr9tE8evgo3qfyDvXgheJ-zAJX5K3KOg&s" alt="" style={{ width: 300, height: 280, borderRadius: 20, margin: "20px 0px 0px 40px" }} />
               </motion.div>
-              <motion.div className="col-lg-7 mt-5" variants={fadeIn("right", 0.3)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }}>
+              <motion.div className="col-lg-7 mt-5" style={{ opacity: 0, overflow: "hidden" }} variants={fadeIn("left", 0.3)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }}>
                 <h3 className="fw-bolder">I'm Hemanth</h3>
                 <h5 className="container mt-3 font-sans tracking-widest text-wrap"> a Full Stack Developer with a strong passion for web development and a commitment to delivering high-quality, user-friendly applications. As a fresher, I have gained hands-on experience working with front-end technologies like HTML, CSS, JavaScript, and React, as well as back-end technologies such as Node.js, Express.js, and MongoDB.</h5>
               </motion.div>
@@ -116,7 +116,7 @@ function App() {
         <div >
           <h1 className="text-center text-primary mt-1 italic underline"  >Skills</h1>
           <div className="container mb-3   mt-4" ref={skillsRef} tabIndex="-1" >
-            <motion.div className="row" variants={fadeIn("up", 0.3)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }} >
+            <motion.div className="row" style={{ opacity: 0, overflow: "hidden" }} variants={fadeIn("up", 0.3)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }} >
               <div className="col-lg-9 text-center" style={{ display: "flex", flexWrap: "wrap", width: "100%", }}>
                 <LogoWall
                   items={skills}
@@ -137,7 +137,7 @@ function App() {
         </div>
         <div ref={Projectref} tabIndex="-1">
           <h1 className="text-center text-primary mt-1 italic underline" ref={Projectref} tabIndex="-1">Projects</h1>
-          <motion.div className="container text-center projectCard " variants={fadeIn("right", 0.5)} initial="hidden" whileInView="show" transition={{ type: 'spring', stiffness: 300 }}>
+          <motion.div className="container text-center projectCard " style={{ opacity: 0, overflow: "hidden" }} variants={fadeIn("right", 0.5)} initial="hidden" whileInView="show" transition={{ type: 'spring', stiffness: 300 }}>
             <Projectcard title={"CUSTOMER RELATIONSHIP MANAGEMENT"} image={"https://th.bing.com/th?id=OIP.DAUyMJRqUuKnEl50f8h4iwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"} descp={"CRM website to track customer data and send the offer to customer through mail"} link={"https://incredible-paletas-852e20.netlify.app/"} />
             <Projectcard title={"URL SHORTENER"} image={"https://img.freepik.com/free-vector/www-concept-illustration_114360-2073.jpg?ga=GA1.1.1529103848.1738552067&semt=ais_hybrid"} descp={"In this application you can short the long URL to short URL but it redirects to actual long URL"} link={"https://eclectic-bombolone-e7b282.netlify.app/"} />
             <Projectcard title={"Ecommerce"} image={"https://th.bing.com/th/id/OIP.jby8OcI6HHBfN7T93hwjCwHaHa?w=157&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"} descp={"Shop on-the-go with seamless mobile shopping, fast checkout, and exclusive deals."} link={"https://aquamarine-begonia-7ba98f.netlify.app/"} />
