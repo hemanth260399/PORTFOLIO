@@ -74,7 +74,7 @@ function App() {
             </div>
           </div>
         </nav>
-        <div className="container py-5 px-5">
+        <div className="container py-5 px-5 ">
           <div className="row title-card">
             <div className="col-lg-7">
               <h1 className="display-1 fw-bolder" ref={homepageref} tabIndex="-1" >Hi,</h1>
