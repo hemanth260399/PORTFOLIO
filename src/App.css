@@ -1,0 +1,88 @@
+.title-card{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.projectCard{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: '300px';
+    border-radius: '10px';
+    overflow: 'hidden';
+    background-color: '#fff';
+    box-shadow: '0 4px 6px rgba(0, 0, 0, 0.1)';
+    text-align: 'center';
+    flex-shrink: 0;
+}
+.contactArea{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center
+}
+.contacttab{
+    width: 80%;
+    height: 20px;
+    border: 3px solid ;
+    border-radius: 12px;
+    padding: 20px;
+}
+ .contacttab:hover,.contacttab:focus{
+    border: 3px solid tomato;
+}
+.autoshow{
+    animation: autoshowanimation;
+    animation-timeline: view(90% 15%);
+}
+@keyframes autoshowanimation {
+    0% {
+        opacity: 0;
+        transform: translateY(200px) scale(0.5);
+    }
+    100% {
+        opacity: 1;
+    transform: translateY(0px) scale(1);
+}
+}
+.mynavbar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+  }
+  .mynavbar:hover,:focus{
+    background-color: inherit;
+  }
+  .mynavbar span{
+    transition: 0.3s;
+    opacity: 1;
+    position: relative;
+    top: 10px;
+  }
+  .mynavbar:hover span{
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .mynavbar i{
+    transition: 0.3s;
+    font-size: 20px;
+    transition: 0.5s;
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  .mynavbar:hover i{
+    opacity: 1;
+    transition: 0.5s;
+    transform: translateY(-10px);
+  }
+  .background-img {
+    background-image: url("https://img.freepik.com/free-vector/gradient-background-vector-spring-colors_53876-117271.jpg?t=st=1739329139~exp=1739332739~hmac=875fe8a3f6b359afe864050c6654da1b5ecf79147ddfac6bfbb5e1fa4cc5f750&w=1060");
+    width: 100%;
+    background-position: top center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
