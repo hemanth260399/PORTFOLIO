@@ -10,4 +10,6 @@ export let skills = [
     { title: "Redux", image: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/50/external-redux-an-open-source-javascript-library-for-managing-application-state-logo-color-tal-revivo.png" },
     { title: "Bootstrap", image: "https://img.icons8.com/color/48/bootstrap--v2.png" },
     { title: "Git", image: "https://img.icons8.com/color/48/git.png" },
+    { title: "OAUTH", image: "https://img.icons8.com/color/50/google-logo.png" },
+    { title: "Tailwind CSS", image: "https://img.icons8.com/color/50/tailwind_css.png" },
 ]
