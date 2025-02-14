@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 import { Projectcard } from "./projectcard"
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import introJs from "intro.js"
@@ -7,6 +7,7 @@ import LogoWall from "./logowall"
 import { MindGames } from "./MindGame"
 import { motion } from "framer-motion"
 import "./App.css"
+import MyPhoto from './MyPhoto.png';
 import { fadeIn } from "./scroll"
 function App() {
   let skillsRef = useRef(null)
@@ -20,20 +21,34 @@ function App() {
     words: ['FULL STACK DEVELOPER', "FRONTEND DEVELOPER", "BACKEND DEVELOPER"],
     loop: Infinity
   })
-  // useEffect(() => {
-  //   introJs().setOptions({
-  //     steps: [{
-  //       intro: "Hi Welcome to Hemanthraja's portfolio"
-  //     }, {
-  //       element: resumeref.current,
-  //       intro: "To Download my resume click here..."
-  //     },
-  //     {
-  //       element: skillsRef.current,
-  //       intro: "My All skills are listed here"
-  //     }]
-  //   }).start();
-  // }, [])
+  useEffect(() => {
+    introJs().setOptions({
+      steps: [{
+        intro: "Hi Welcome to Hemanthraja's portfolio"
+      },
+      {
+        element: resumeref.current,
+        intro: "To View my resume click here..."
+      },
+      {
+        element: Aboutref.current,
+        intro: "Who I Am , What I Do , My Values "
+      }, {
+        element: skillsRef.current,
+        intro: "My All skills are scrolling here..."
+      }, {
+        element: Gamesref.current,
+        intro: "Games For fun"
+      },
+      {
+        element: Projectref.current,
+        intro: "All Projects are listed here"
+      }, {
+        element: Contactref.current,
+        intro: "You can contact me here"
+      }]
+    }).start();
+  }, [])
 
   return (
     <>
@@ -91,16 +106,16 @@ function App() {
                   <h4 className="display-6 inline-block fw-bolder "> - LINKEDIN</h4>
                 </a>
               </div>
-              <a href="https://drive.google.com/file/d/1Fqmth9ug4zTyZ1ahUo49KwBLXYKPG2Z0/view?usp=drive_link" ref={resumeref} target="_blank" className="btn btn-primary btn-lg active mt-5" role="button" aria-pressed="true">Download Resume</a>
+              <a href="https://drive.google.com/file/d/1-kkCQtGe7B_shQs7uN2eIjl0cMXbkGfN/view?usp=drivesdk" ref={resumeref} target="_blank" className="btn btn-primary btn-lg active mt-5" role="button" aria-pressed="true">View Resume</a>
             </div>
             <div className="col text-center">
-              <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?ga=GA1.1.23112830.1720934866&semt=ais_hybrid" className="rounded-circle border border-dark border-5" alt="hemanth" style={{ width: 400, height: 400, marginTop: "50px" }} />
+              <img src={MyPhoto} alt="hemanth" className="border-5 border-dark mt-5 text-center" style={{ width: 350, height: 380, borderRadius: "100%" }} />
             </div>
           </div>
         </div>
-        <div >
+        <div ref={Aboutref} tabIndex="-1">
           <h1 className="text-center text-primary mt-5 italic underline">About</h1>
-          <div className="container" ref={Aboutref} tabIndex="-1">
+          <div className="container" >
             <div className=" row">
               <motion.div className="col-lg-4" style={{ opacity: 0, overflow: "hidden" }} variants={fadeIn("right", 0.3)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }}>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPnZr9tE8evgo3qfyDvXgheJ-zAJX5K3KOg&s" alt="" style={{ width: 300, height: 280, borderRadius: 20, margin: "20px 0px 0px 40px" }} />
@@ -113,9 +128,9 @@ function App() {
           </div>
         </div>
         <br />
-        <div >
+        <div ref={skillsRef} tabIndex="-1">
           <h1 className="text-center text-primary mt-1 italic underline"  >Skills</h1>
-          <div className="container mb-3   mt-4" ref={skillsRef} tabIndex="-1" >
+          <div className="container mb-3   mt-4"  >
             <motion.div className="row" style={{ opacity: 0, overflow: "hidden" }} variants={fadeIn("up", 0.3)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }} >
               <div className="col-lg-9 text-center" style={{ display: "flex", flexWrap: "wrap", width: "100%", }}>
                 <LogoWall
@@ -131,9 +146,11 @@ function App() {
             </motion.div>
           </div >
         </div>
-        <h1 className="text-center text-primary mt-5 autoshow italic underline" ref={Gamesref} tabIndex="-1">Games</h1>
-        <div className="autoshow" ref={Gamesref} tabIndex="-1">
-          <MindGames />
+        <div ref={Gamesref} tabIndex="-1">
+          <h1 className="text-center text-primary mt-5 autoshow italic underline">Games</h1>
+          <div className="autoshow" >
+            <MindGames />
+          </div>
         </div>
         <div ref={Projectref} tabIndex="-1">
           <h1 className="text-center text-primary mt-1 italic underline" ref={Projectref} tabIndex="-1">Projects</h1>
