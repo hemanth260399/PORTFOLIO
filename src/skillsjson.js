@@ -12,4 +12,5 @@ export let skills = [
     { title: "Git", image: "https://img.icons8.com/color/48/git.png" },
     { title: "OAUTH", image: "https://img.icons8.com/color/50/google-logo.png" },
     { title: "Tailwind CSS", image: "https://img.icons8.com/color/50/tailwind_css.png" },
+    { title: "SOCKET IO", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRaKTaWak3J_Mn8ZNKGOC8nVDco4YfnjAhbw&s" }
 ]

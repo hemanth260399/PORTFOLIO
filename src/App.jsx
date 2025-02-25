@@ -9,6 +9,7 @@ import { motion } from "framer-motion"
 import "./App.css"
 import MyPhoto from './MyPhoto.png';
 import { fadeIn } from "./scroll"
+import { projects } from "./projectJSON"
 function App() {
   let skillsRef = useRef(null)
   let homepageref = useRef(null)
@@ -53,7 +54,7 @@ function App() {
   return (
     <>
       <div className="background-img">
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark " style={{ position: "sticky", zIndex: 99, top: 0 }}>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark " style={{ position: "sticky", zIndex: 99, top: 0, height: 60 }}>
           <div className="container" >
             <button className="navbar-brand fs-4 bg-dark border-0">PORTFOLIO</button>
             <button className="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -106,7 +107,7 @@ function App() {
                   <h4 className="display-6 inline-block fw-bolder "> - LINKEDIN</h4>
                 </a>
               </div>
-              <a href="https://drive.google.com/file/d/1-kkCQtGe7B_shQs7uN2eIjl0cMXbkGfN/view?usp=drivesdk" ref={resumeref} target="_blank" className="btn btn-primary btn-lg active mt-5" role="button" aria-pressed="true">View Resume</a>
+              <a href="https://drive.google.com/file/d/1LglsQwNvdj0XRPvRCZUvfOcr5YSTMJ3P/view?usp=drive_link" ref={resumeref} target="_blank" className="btn btn-primary btn-lg active mt-5" role="button" aria-pressed="true">View Resume</a>
             </div>
             <div className="col text-center">
               <img src={MyPhoto} alt="hemanth" className="border-5 border-dark mt-5 text-center" style={{ width: 350, height: 380, borderRadius: "100%" }} />
@@ -155,10 +156,11 @@ function App() {
         <div ref={Projectref} tabIndex="-1">
           <h1 className="text-center text-primary mt-1 italic underline" ref={Projectref} tabIndex="-1">Projects</h1>
           <motion.div className="container text-center projectCard " style={{ opacity: 0, overflow: "hidden" }} variants={fadeIn("right", 0.5)} initial="hidden" whileInView="show" transition={{ type: 'spring', stiffness: 300 }}>
-            <Projectcard title={"CUSTOMER RELATIONSHIP MANAGEMENT"} image={"https://th.bing.com/th?id=OIP.DAUyMJRqUuKnEl50f8h4iwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"} descp={"CRM website to track customer data and send the offer to customer through mail"} link={"https://incredible-paletas-852e20.netlify.app/"} />
-            <Projectcard title={"URL SHORTENER"} image={"https://img.freepik.com/free-vector/www-concept-illustration_114360-2073.jpg?ga=GA1.1.1529103848.1738552067&semt=ais_hybrid"} descp={"In this application you can short the long URL to short URL but it redirects to actual long URL"} link={"https://eclectic-bombolone-e7b282.netlify.app/"} />
-            <Projectcard title={"Ecommerce"} image={"https://th.bing.com/th/id/OIP.jby8OcI6HHBfN7T93hwjCwHaHa?w=157&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"} descp={"Shop on-the-go with seamless mobile shopping, fast checkout, and exclusive deals."} link={"https://aquamarine-begonia-7ba98f.netlify.app/"} />
-            <Projectcard title={"Front End project"} image={"https://img.freepik.com/premium-photo/man-is-using-computer-with-code-code-code-screen_1129891-19208.jpg?ga=GA1.1.1529103848.1738552067&semt=ais_hybrid"} descp={"Developed a dynamic nested navigation bar and custom-designed buttons for enhanced user interaction and seamless navigation"} link={"https://statuesque-clafoutis-d5fa4c.netlify.app/"} />
+            {
+              projects.map((project) => (
+                <Projectcard key={project.id} title={project.title} image={project.image} descp={project.descp} link={project.link} FE={project.FE} BE={project.BE} stack={project.stack} />
+              ))
+            }
           </motion.div>
         </div>
         <h1 className="text-center text-primary mt-5 mb-4 autoshow italic underline" >Contact</h1>
@@ -167,15 +169,15 @@ function App() {
             <input type="hidden" name="access_key" value="62fac39d-e4b5-4ba7-ac59-e1b199bc9bb2"></input>
 
             <div className="mb-3 contactArea">
-              <label for="exampleFormControlInput1 " ><h5>Name</h5></label>
+              <label htmlFor="exampleFormControlInput1 " ><h5>Name</h5></label>
               <input type="text" className="contacttab" id="exampleFormControlInput1" required placeholder="Enter name" />
             </div>
             <div className="mb-3 contactArea">
-              <label for="exampleFormControlInput1" ><h5>Email address</h5></label>
+              <label htmlFor="exampleFormControlInput1" ><h5>Email address</h5></label>
               <input type="email" className="contacttab" id="exampleFormControlInput1" required placeholder="Enter email" />
             </div>
             <div className="mb-3 contactArea">
-              <label for="exampleFormControlTextarea1" ><h5>Message</h5></label>
+              <label htmlFor="exampleFormControlTextarea1" ><h5>Message</h5></label>
               <textarea className="contacttab" name="message" id="exampleFormControlTextarea1" required style={{ height: 100 }} ></textarea>
             </div>
             <button type="submit" className="btn btn-primary">Submit</button>
