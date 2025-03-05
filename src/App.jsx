@@ -223,7 +223,6 @@ function App() {
             </div>
             <div>
               <form action="https://api.web3forms.com/submit" method="POST">
-                <h1 className="text-info  mb-2">Get In Touch</h1>
                 <input type="hidden" name="access_key" value="62fac39d-e4b5-4ba7-ac59-e1b199bc9bb2"></input>
                 <div className="mb-3 contactArea">
                   <label htmlFor="exampleFormControlInput1 " ><h5>Name</h5></label>

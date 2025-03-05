@@ -2,7 +2,7 @@ import "./projectCard.css"
 export let Projectcard = ({ title, image, descp, link, FE, BE, stack }) => {
     return (
         <>
-            <div className="col-md-4 col-sm-6 m-5">
+            <div className="col-lg-4 col-sm-6 mt-5 mx-1">
                 <div className="project-card d-flex" style={{ width: "24rem", height: "38rem" }}>
                     <div className="project-card-inner" >
                         <div className="project-card-image">

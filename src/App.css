@@ -7,17 +7,12 @@
 .projectCard{
     display:flex;
     flex-wrap: wrap;
-    justify-content: center;
-    width: '300px';
-    border-radius: '10px';
-    overflow: 'hidden';
-    background-color: '#fff';
-    box-shadow: '0 4px 6px rgba(0, 0, 0, 0.1)';
-    text-align: 'center';
-    flex-shrink: 0;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .contactArea{
-    width: 22rem;
+    width: 45vw;
     display: flex;
     flex-direction: column;
     gap: 10px;
