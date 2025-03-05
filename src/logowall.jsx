@@ -53,8 +53,8 @@ function LogoWall({
                 </div>
                 <div className="marquee__group" aria-hidden="true">
                     {items.map((item, idx) => (
-                        <span>
-                            <img key={`dup2-${idx}`} src={item.image} alt={item.altText} style={{ backgroundColor: "transparent" }} />
+                        <span key={`dup2-${idx}`}>
+                            <img src={item.image} alt={item.altText} style={{ backgroundColor: "transparent" }} />
                             <h4>{item.title}</h4>
                         </span>
                     ))}
