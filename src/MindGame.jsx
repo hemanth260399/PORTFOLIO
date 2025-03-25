@@ -18,7 +18,7 @@ export let MindGames = () => {
         setranNumber(`box-${temp}`)
     }
     let startButton = () => {
-        intervelIdRef.current = setInterval(() => randomNumber(1, 9), 750)
+        intervelIdRef.current = setInterval(() => randomNumber(1, 9), 780)
     }
     let resetButton = () => {
         setpoints(0)

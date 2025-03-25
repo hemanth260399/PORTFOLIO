@@ -1,98 +1,181 @@
-.title-card{
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
+.title-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
-.projectCard{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    border-radius: 10px;
-    overflow: hidden;
+.title-color-card {
+  background: linear-gradient(
+    90deg,
+    rgba(154, 242, 227, 1) 32%,
+    rgba(216, 242, 238, 1) 100%
+  );
 }
-.contactArea{
-    width: 45vw;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center
+.navFullBar {
+  background: rgb(195, 6, 236);
+  background: linear-gradient(
+    90deg,
+    rgba(195, 6, 236, 1) 3%,
+    rgba(244, 0, 255, 1) 31%
+  );
+  -webkit-box-shadow: 3px 14px 31px 3px rgba(195, 6, 236, 1);
+  -moz-box-shadow: 3px 14px 31px 3px rgba(195, 6, 236, 1);
+  box-shadow: 3px 3px 20px 3px rgba(240, 91, 240, 1);
 }
-.contacttab{
-    width: 100%;
-    height: 20px;
-    border: 3px solid ;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
+.projectCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  column-gap: 120px;
 }
- .contacttab:hover,.contacttab:focus{
-    border: 3px solid tomato;
-}
-.autoshow{
-    animation: autoshowanimation;
-    animation-timeline: view(90% 15%);
+.autoshow {
+  animation: autoshowanimation;
+  animation-timeline: view(90% 15%);
 }
 @keyframes autoshowanimation {
-    0% {
-        opacity: 0;
-        transform: translateY(200px) scale(0.5);
-    }
-    100% {
-        opacity: 1;
+  0% {
+    opacity: 0;
+    transform: translateY(200px) scale(0.5);
+  }
+  100% {
+    opacity: 1;
     transform: translateY(0px) scale(1);
+  }
 }
-}
-.mynavbar{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 10;
-  }
-  .mynavbar:hover,:focus{
-    background-color: inherit;
-  }
-  .mynavbar span{
-    transition: 0.3s;
-    opacity: 1;
-    position: relative;
-    top: 10px;
-  }
-  .mynavbar:hover span{
-    transition: 0.5s;
-    opacity: 0;
-  }
-  .mynavbar i{
-    transition: 0.3s;
-    font-size: 20px;
-    transition: 0.5s;
-    transform: translateY(40px);
-    opacity: 0;
-  }
-  .mynavbar:hover i{
-    opacity: 1;
-    transition: 0.5s;
-    transform: translateY(-10px);
-  }
-  .background-img {
-    background-image:url("https://img.freepik.com/free-vector/abstract-blurred-background_1034-237.jpg?ga=GA1.1.1529103848.1738552067&semt=ais_hybrid");
-    width: 100%;
-    background-position: top center;
-    background-repeat: no-repeat; 
-    background-size: cover;
-}
-.contact-bar{
-  width: 100%;
+.mynavbar {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  background-color: rgb(255, 255, 255);
-  flex-wrap: wrap;
-  padding: 10px;
-  border-radius: 25px;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+  font-weight: bolder;
+  font-size: larger;
 }
-.contact-img{
-  border-radius: 25%;
-  overflow: hidden;
+.mynavbar:hover,
+:focus {
+  background-color: inherit;
+}
+.mynavbar span {
+  transition: 0.3s;
+  opacity: 1;
+  position: relative;
+  top: 10px;
+}
+.mynavbar:hover span {
+  transition: 0.5s;
+  opacity: 0;
+}
+.mynavbar i {
+  transition: 0.3s;
+  font-size: 20px;
+  transition: 0.5s;
+  transform: translateY(40px);
+  opacity: 0;
+}
+.mynavbar:hover i {
+  opacity: 1;
+  transition: 0.5s;
+  transform: translateY(-10px);
+}
+.resume {
+  background: linear-gradient(
+    90deg,
+    rgba(195, 6, 236, 1) 3%,
+    rgba(244, 0, 255, 1) 100%
+  );
+  padding: 15px 30px;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+.resume:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(244, 0, 255, 1) 32%,
+    rgba(195, 6, 236, 1) 100%
+  );
+  transition: 0.5s;
+}
+
+.mediaButton a {
+  position: relative;
+  text-decoration: none;
+  z-index: 0;
+  border-radius: 50%;
+  padding: 2px 4px;
+  margin: 0px 20px;
+}
+.mediaButton a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(154, 242, 227, 1);
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  z-index: -1;
+}
+.mediaButton a::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -8px;
+  background: linear-gradient(
+    90deg,
+    rgba(244, 0, 255, 1) 32%,
+    rgba(195, 6, 236, 1) 100%
+  );
+  width: calc(100% + 15px);
+  height: calc(100% + 12px);
+  z-index: -2;
+  border-radius: 100%;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+.mediaButton a:hover::after {
+  filter: blur(10px);
+  transition: 0.5s;
+}
+.textDec {
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+  text-decoration-color: rgb(244, 0, 255);
+  text-underline-offset: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.partonesplit {
+  background: linear-gradient(
+    90deg,
+    rgba(154, 242, 227, 1) 32%,
+    rgba(216, 242, 238, 1) 100%
+  );
+  padding: 20px;
+  transform: skewY(-3deg);
+}
+.contentSplit {
+  transform: skewY(3deg);
+}
+.contact-form-section {
+  max-width: 600px;
+  width: 100%;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+  border-radius: 8px;
+}
+
+.contact-form-section button {
+  background-color: rgb(244, 0, 255);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  transition: background-color 0.3s;
+}
+
+.contact-form-section button:hover {
+  background-color: #e300b3;
 }
