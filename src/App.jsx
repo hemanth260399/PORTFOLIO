@@ -212,11 +212,11 @@ function App() {
                   <input type="hidden" name="access_key" value="62fac39d-e4b5-4ba7-ac59-e1b199bc9bb2"></input>
                   <div className="mb-3 ">
                     <label htmlFor="exampleFormControlInput1 " ><h5>Name</h5></label>
-                    <input type="text" className="form-control" id="exampleFormControlInput1" required placeholder="Enter name" />
+                    <input type="text" className="form-control" name="name" id="exampleFormControlInput1" required placeholder="Enter name" />
                   </div>
                   <div className="mb-3 ">
                     <label htmlFor="exampleFormControlInput1" ><h5>Email address</h5></label>
-                    <input type="email" className="form-control" id="exampleFormControlInput1" required placeholder="Enter email" />
+                    <input type="email" className="form-control" name="email" id="exampleFormControlInput1" required placeholder="Enter email" />
                   </div>
                   <div className="mb-3">
                     <label htmlFor="exampleFormControlTextarea1" ><h5>Message</h5></label>
@@ -244,11 +244,11 @@ function App() {
               <div className=" text-center">
                 <h4>Connect with Me</h4>
                 <div className="social-icons mt-4">
-                  <a href="https://www.facebook.com/profile.php?id=100008271646816" target="_blank" rel="noopener noreferrer" className="social-icon">
-                    <i className="fa-brands fa-facebook mx-3 h3 p-2 border-3 border-primary rounded-circle"></i>
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hemanthraja26@gmail.com.com&su=Hello&body=How%20are%20you%3F" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <i className="fa-brands fa fa-google mx-3 h3 p-2 border-3 border-primary rounded-circle"></i>
                   </a>
-                  <a href="https://www.instagram.com/hemanthraider/" target="_blank" rel="noopener noreferrer" className="social-icon">
-                    <i className="fa-brands fa-instagram mx-3 h3 p-2 border-3 border-primary rounded-circle"></i>
+                  <a href="https://github.com/hemanth260399" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <i className="fa-brands fa-github mx-3 h3 p-2 border-3 border-primary rounded-circle"></i>
                   </a>
                   <a href="https://www.linkedin.com/in/hemanth-raja-305a08142/" target="_blank" rel="noopener noreferrer" className="social-icon">
                     <i className="fa-brands fa-linkedin mx-3 h3 p-2 border-3 border-primary rounded-circle"></i>
