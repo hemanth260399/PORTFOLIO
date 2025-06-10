@@ -123,7 +123,7 @@ function App() {
               <h1 className="display-1 fw-bolder text-dark" ref={homepageref} tabIndex="-1" >Hi, </h1>
               <h1 className="display-3 fw-bolder mt-3 text-dark">I'am HemanthRaja S</h1>
               <h1 className="display-5 fw-bolder mt-4 " style={{ background: "linear-gradient(0deg, rgba(195,6,236,1) 1%, rgba(244,0,255,1) 100%)", WebkitBackgroundClip: "text", color: "transparent", fontFamily: "monospace" }}>{text}<Cursor cursorColor='blue' /></h1>
-              <a href="https://drive.google.com/file/d/19Z9i_cu4tSDXtST1n3LrZ6zRHmHyHn5v/view?usp=drivesdk" ref={resumeref} target="_blank" className="btn active mt-4 resume" role="button" aria-pressed="true">View Resume</a>
+              <a href="https://drive.google.com/file/d/1RzMKqGX6crmfwPERKdoE0eMKs00GgPiy/view?usp=drivesdk" ref={resumeref} target="_blank" className="btn active mt-4 resume" role="button" aria-pressed="true">View Resume</a>
               <div className="flex flex-end mediaButton mt-5">
                 <a href="https://github.com/hemanth260399" className="mr-5" target="_blank" >
                   <i className="fa-brands fa-github text-dark p-2 display-6"></i>
